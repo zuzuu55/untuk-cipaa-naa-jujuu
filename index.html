@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
- 
+
   :root {
     --pink-light: #ffd6e7;
     --pink-mid: #ffadd2;
@@ -20,9 +20,9 @@
     --gold: #fbbf24;
     --white-soft: rgba(255,255,255,0.9);
   }
- 
+
   html { scroll-behavior: smooth; }
- 
+
   body {
     background: var(--galaxy-dark);
     color: #fff;
@@ -30,7 +30,7 @@
     overflow-x: hidden;
     min-height: 100vh;
   }
- 
+
   /* ── CANVAS STARS ── */
   #stars-canvas {
     position: fixed;
@@ -38,7 +38,7 @@
     z-index: 0;
     pointer-events: none;
   }
- 
+
   /* ── NEBULA BLOBS ── */
   .nebula {
     position: fixed;
@@ -51,12 +51,12 @@
   .nebula-1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(192,132,252,0.18), transparent 70%); top: -100px; left: -100px; animation-delay: 0s; }
   .nebula-2 { width: 600px; height: 400px; background: radial-gradient(circle, rgba(236,72,153,0.14), transparent 70%); bottom: 0; right: -100px; animation-delay: -6s; }
   .nebula-3 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,173,210,0.12), transparent 70%); top: 40%; left: 30%; animation-delay: -12s; }
- 
+
   @keyframes nebula-drift {
     0%   { transform: translate(0,0) scale(1); }
     100% { transform: translate(40px, 30px) scale(1.12); }
   }
- 
+
   /* ── FALLING PETALS ── */
   .petals-container {
     position: fixed;
@@ -76,14 +76,14 @@
     0%   { transform: translateY(0) rotate(0deg); opacity: 0.8; }
     100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
   }
- 
+
   /* ── PAGE WRAPPER ── */
   .page {
     position: relative;
     z-index: 2;
     min-height: 100vh;
   }
- 
+
   /* ── HERO ── */
   .hero {
     min-height: 100vh;
@@ -95,14 +95,14 @@
     padding: 2rem;
     position: relative;
   }
- 
+
   .crown {
     font-size: 2.5rem;
     animation: float 3s ease-in-out infinite;
     margin-bottom: 0.5rem;
     filter: drop-shadow(0 0 18px #fbbf2488);
   }
- 
+
   .hero-badge {
     font-family: 'Dancing Script', cursive;
     font-size: 1.1rem;
@@ -113,7 +113,7 @@
     opacity: 0;
     animation: fade-up 1s 0.4s forwards;
   }
- 
+
   .hero-name {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2.8rem, 8vw, 6.5rem);
@@ -128,11 +128,11 @@
     position: relative;
     filter: drop-shadow(0 0 40px rgba(244,114,182,0.4));
   }
- 
+
   .hero-name .italic-part {
     font-style: italic;
   }
- 
+
   .divider-line {
     width: 120px;
     height: 1px;
@@ -141,7 +141,7 @@
     opacity: 0;
     animation: fade-up 1s 1.1s forwards;
   }
- 
+
   .hero-tagline {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
@@ -152,7 +152,7 @@
     opacity: 0;
     animation: fade-up 1s 1.4s forwards;
   }
- 
+
   .scroll-hint {
     position: absolute;
     bottom: 2.5rem;
@@ -175,7 +175,7 @@
     height: 36px;
     background: linear-gradient(to bottom, var(--pink-mid), transparent);
   }
- 
+
   /* ── FLOATING HEARTS & STARS ── */
   .floaties {
     position: absolute;
@@ -190,14 +190,14 @@
     font-size: var(--sz, 1.2rem);
     opacity: 0.6;
   }
- 
+
   /* ── SECTIONS ── */
   section {
     padding: 5rem 2rem;
     max-width: 900px;
     margin: 0 auto;
   }
- 
+
   .section-label {
     font-family: 'Dancing Script', cursive;
     font-size: 1rem;
@@ -224,14 +224,14 @@
   }
   .visible .section-label,
   .visible .section-title { opacity: 1; transform: translateY(0); }
- 
+
   /* ── CARDS ── */
   .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
   }
- 
+
   .card {
     background: linear-gradient(135deg, rgba(192,132,252,0.08), rgba(236,72,153,0.08));
     border: 1px solid rgba(244,114,182,0.2);
@@ -250,7 +250,7 @@
     box-shadow: 0 20px 60px rgba(236,72,153,0.2);
     border-color: rgba(244,114,182,0.5);
   }
- 
+
   .card-icon { font-size: 2.2rem; margin-bottom: 1rem; display: block; animation: float 3.5s ease-in-out infinite; }
   .card-title {
     font-family: 'Playfair Display', serif;
@@ -264,7 +264,7 @@
     line-height: 1.7;
     font-style: italic;
   }
- 
+
   /* ── GALAXY QUOTE ── */
   .quote-section {
     display: flex;
@@ -298,9 +298,9 @@
     font-size: 3.5rem;
     animation: spin-slow 20s linear infinite reverse, float 4s ease-in-out infinite;
   }
- 
+
   @keyframes spin-slow { to { transform: rotate(360deg); } }
- 
+
   .blockquote {
     text-align: center;
     max-width: 560px;
@@ -319,7 +319,7 @@
     color: var(--pink-deep);
     letter-spacing: 0.1em;
   }
- 
+
   /* ── FOOTER ── */
   footer {
     text-align: center;
@@ -343,7 +343,7 @@
     font-size: 0.8rem;
     letter-spacing: 0.15em;
   }
- 
+
   /* ── ANIMATIONS ── */
   @keyframes float {
     0%, 100% { transform: translateY(0); }
@@ -357,21 +357,21 @@
     0%, 100% { transform: translateX(-50%) translateY(0); }
     50% { transform: translateX(-50%) translateY(8px); }
   }
- 
+
   /* ── PHOTO GALLERY ── */
   .gallery-section {
     padding: 5rem 2rem;
     max-width: 980px;
     margin: 0 auto;
   }
- 
+
   .photo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto auto;
     gap: 1.2rem;
   }
- 
+
   .photo-frame {
     position: relative;
     border-radius: 20px;
@@ -392,13 +392,13 @@
     box-shadow: 0 24px 70px rgba(236,72,153,0.28), 0 0 0 1px rgba(244,114,182,0.4);
     z-index: 2;
   }
- 
+
   /* frame sizes */
   .photo-frame.large  { grid-column: span 2; aspect-ratio: 16/10; }
   .photo-frame.tall   { grid-row: span 2; aspect-ratio: 3/4; }
   .photo-frame.square { aspect-ratio: 1; }
   .photo-frame.wide   { grid-column: span 2; aspect-ratio: 16/9; }
- 
+
   .photo-frame img {
     width: 100%; height: 100%;
     object-fit: cover;
@@ -406,7 +406,7 @@
     transition: transform 0.6s ease;
   }
   .photo-frame:hover img { transform: scale(1.07); }
- 
+
   /* placeholder — label wraps the input natively */
   .photo-placeholder {
     display: flex;
@@ -421,7 +421,7 @@
     transition: background 0.3s;
   }
   .photo-placeholder:hover { background: rgba(244,114,182,0.06); }
- 
+
   /* hide the raw file input but keep it accessible */
   .photo-input {
     position: absolute;
@@ -429,7 +429,7 @@
     opacity: 0;
     pointer-events: none;
   }
- 
+
   .placeholder-ring {
     width: 64px; height: 64px;
     border-radius: 50%;
@@ -442,7 +442,7 @@
     border-color: var(--pink-deep);
     transform: scale(1.1);
   }
- 
+
   .placeholder-label {
     font-family: 'Dancing Script', cursive;
     font-size: 0.95rem;
@@ -451,7 +451,7 @@
     line-height: 1.4;
     padding: 0 1rem;
   }
- 
+
   /* overlay caption on hover */
   .photo-caption {
     position: absolute;
@@ -470,7 +470,7 @@
     color: var(--pink-light);
     letter-spacing: 0.05em;
   }
- 
+
   /* lightbox */
   .lightbox {
     position: fixed; inset: 0;
@@ -504,7 +504,7 @@
     font-size: 1.2rem; color: var(--pink-light);
     white-space: nowrap;
   }
- 
+
   /* ── GLITTER PARTICLES ── */
   .glitter { position: fixed; inset: 0; pointer-events: none; z-index: 1; overflow: hidden; }
   .spark {
@@ -523,20 +523,20 @@
 </style>
 </head>
 <body>
- 
+
 <canvas id="stars-canvas"></canvas>
 <div class="nebula nebula-1"></div>
 <div class="nebula nebula-2"></div>
 <div class="nebula nebula-3"></div>
- 
+
 <!-- Glitter sparks -->
 <div class="glitter" id="glitter"></div>
- 
+
 <!-- Falling petals -->
 <div class="petals-container" id="petals"></div>
- 
+
 <div class="page">
- 
+
   <!-- HERO -->
   <section class="hero" style="min-height:100vh; padding:2rem;">
     <div class="floaties">
@@ -549,25 +549,25 @@
       <span class="floaty" style="--dur:5.2s;--del:-2.5s;--sz:0.8rem;top:35%;left:5%;">💕</span>
       <span class="floaty" style="--dur:4.2s;--del:-0.8s;--sz:1rem;top:45%;right:6%;">🌙</span>
     </div>
- 
+
     <div class="crown">👑</div>
     <p class="hero-badge">✦ for you, always ✦</p>
- 
+
     <h1 class="hero-name">
       Hasifa<br>
       <span class="italic-part">Ara</span><br>
-      Daniela
+      Daniella
     </h1>
- 
+
     <div class="divider-line"></div>
- 
+
     <p class="hero-tagline">
       Di antara bintang-bintang dan bunga yang mekar,<br>namamu terukir indah di galaksi cinta ini.
     </p>
- 
+
     <div class="scroll-hint">scroll</div>
   </section>
- 
+
   <!-- CARDS SECTION -->
   <section id="cards-section">
     <p class="section-label">✦ keistimewaanmu ✦</p>
@@ -590,7 +590,7 @@
       </div>
     </div>
   </section>
- 
+
   <!-- QUOTE / GALAXY RING -->
   <div class="quote-section">
     <div class="quote-ring">
@@ -598,17 +598,17 @@
     </div>
     <div class="blockquote">
       <p>"Kamu adalah puisi yang ditulis bintang-bintang, bunga yang ditanam di tengah galaksi cinta yang tak bertepi."</p>
-      <cite>— Untuk Hasifa Ara Daniela</cite>
+      <cite>— Untuk Hasifa Ara Daniella</cite>
     </div>
   </div>
- 
+
   <!-- PHOTO GALLERY -->
   <div class="gallery-section" id="gallery-section">
     <p class="section-label" style="text-align:center;margin-bottom:0.8rem;">✦ kenangan kita ✦</p>
     <h2 class="section-title" style="text-align:center;margin-bottom:2.5rem;">Foto Kita Berdua</h2>
- 
+
     <div class="photo-grid">
- 
+
       <!-- Frame 1 — large, solo dia -->
       <div class="photo-frame large" data-caption="Hasifa Ara Daniela 🌸" style="transition-delay:0.0s;">
         <label class="photo-placeholder">
@@ -616,9 +616,9 @@
           <div class="placeholder-ring">🌸</div>
           <p class="placeholder-label">Foto dia<br><small style="font-size:0.8rem;opacity:0.6;">klik untuk pilih foto</small></p>
         </label>
-        <div class="photo-caption"><span>Hasifa Ara Daniela 🌸</span></div>
+        <div class="photo-caption"><span>Hasifa Ara Daniella 🌸</span></div>
       </div>
- 
+
       <!-- Frame 2 — tall, kita berdua -->
       <div class="photo-frame tall" data-caption="Kita Berdua 💕" style="transition-delay:0.1s;">
         <label class="photo-placeholder">
@@ -628,7 +628,7 @@
         </label>
         <div class="photo-caption"><span>Kita Berdua 💕</span></div>
       </div>
- 
+
       <!-- Frame 3 — square, momen spesial -->
       <div class="photo-frame square" data-caption="Momen Spesial ✨" style="transition-delay:0.2s;">
         <label class="photo-placeholder">
@@ -638,7 +638,7 @@
         </label>
         <div class="photo-caption"><span>Momen Spesial ✨</span></div>
       </div>
- 
+
       <!-- Frame 4 — square, dia tersenyum -->
       <div class="photo-frame square" data-caption="Senyummu 🌷" style="transition-delay:0.3s;">
         <label class="photo-placeholder">
@@ -648,7 +648,7 @@
         </label>
         <div class="photo-caption"><span>Senyummu 🌷</span></div>
       </div>
- 
+
       <!-- Frame 5 — wide, foto bareng -->
       <div class="photo-frame wide" data-caption="Bersama Selamanya 💫" style="transition-delay:0.4s;">
         <label class="photo-placeholder">
@@ -658,17 +658,17 @@
         </label>
         <div class="photo-caption"><span>Bersama Selamanya 💫</span></div>
       </div>
- 
+
     </div>
   </div>
- 
+
   <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox">
     <div class="lightbox-close" id="lightbox-close">✕</div>
     <img id="lightbox-img" src="" alt="">
     <div class="lightbox-caption" id="lightbox-caption"></div>
   </div>
- 
+
   <!-- SECOND CARDS -->
   <section id="cards-section-2">
     <p class="section-label">✦ momen istimewa ✦</p>
@@ -691,28 +691,28 @@
       </div>
     </div>
   </section>
- 
+
 </div>
- 
+
 <!-- FOOTER -->
 <footer>
-  <span class="footer-name">Hasifa Ara Daniella</span>
-  <small>✦ selalu di hati, seperti bintang di galaksi ✦</small>
+  <span class="footer-name">Ditulis Oleh Jujuuu</span>
+  <small>✦ selalu di hati kamu, seperti bintang di galaksi ✦</small>
 </footer>
- 
+
 <script>
 /* ── STARS CANVAS ── */
 const canvas = document.getElementById('stars-canvas');
 const ctx = canvas.getContext('2d');
 let stars = [];
- 
+
 function resize() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
 resize();
 window.addEventListener('resize', resize);
- 
+
 function initStars() {
   stars = [];
   for (let i = 0; i < 220; i++) {
@@ -727,7 +727,7 @@ function initStars() {
   }
 }
 initStars();
- 
+
 function drawStars() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   stars.forEach(s => {
@@ -743,10 +743,10 @@ function drawStars() {
   requestAnimationFrame(drawStars);
 }
 drawStars();
- 
+
 /* ── FALLING PETALS ── */
 const petalContainer = document.getElementById('petals');
-const petalEmojis = ['🌸','🌺','🌷','🌹','💮','🏵️'];e
+const petalEmojis = ['🌸','🌺','🌷','🌹','💮','🏵️'];
 for (let i = 0; i < 18; i++) {
   const p = document.createElement('span');
   p.className = 'petal';
@@ -757,7 +757,7 @@ for (let i = 0; i < 18; i++) {
   p.style.fontSize = (1 + Math.random() * 1) + 'rem';
   petalContainer.appendChild(p);
 }
- 
+
 /* ── GLITTER SPARKS ── */
 const glitter = document.getElementById('glitter');
 const sparkColors = ['#ffd6e7','#f9a8d4','#c084fc','#fbbf24','#ffffff'];
@@ -771,7 +771,7 @@ for (let i = 0; i < 40; i++) {
   s.style.background = sparkColors[Math.floor(Math.random() * sparkColors.length)];
   glitter.appendChild(s);
 }
- 
+
 /* ── SCROLL ANIMATIONS ── */
 const observerOptions = { threshold: 0.15 };
 const observer = new IntersectionObserver((entries) => {
@@ -787,12 +787,12 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, observerOptions);
- 
+
 document.querySelectorAll('section, .quote-section').forEach(el => observer.observe(el));
- 
+
 /* ── PHOTO GALLERY ── */
 const gallerySection = document.getElementById('gallery-section');
- 
+
 const galleryObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -806,7 +806,7 @@ const galleryObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 if (gallerySection) galleryObserver.observe(gallerySection);
- 
+
 // Native label+input — onChange fires reliably on all browsers
 document.querySelectorAll('.photo-input').forEach(input => {
   input.addEventListener('change', function() {
@@ -830,13 +830,13 @@ document.querySelectorAll('.photo-input').forEach(input => {
     reader.readAsDataURL(file);
   });
 });
- 
+
 // Lightbox
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxCaption = document.getElementById('lightbox-caption');
 const lightboxClose = document.getElementById('lightbox-close');
- 
+
 function openLightbox(src, caption) {
   lightboxImg.src = src;
   lightboxCaption.textContent = caption || '';
@@ -850,8 +850,8 @@ function closeLightbox() {
 lightboxClose.addEventListener('click', closeLightbox);
 lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
- 
- 
+
+
 document.addEventListener('mousemove', (e) => {
   if (Math.random() > 0.85) {
     const spark = document.createElement('div');
@@ -875,4 +875,3 @@ document.head.appendChild(style);
 </script>
 </body>
 </html>
- 
